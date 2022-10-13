@@ -23,3 +23,14 @@ int ConvertNumberToBinary(int num)
     return binaryNum;
 }
 
+// рекурсионный метод
+
+int number = 13;
+DecToBin(number);
+
+void DecToBin(int num)
+{
+    if (num == 0) return;
+    DecToBin(num / 2);
+    Console.Write(num % 2);
+}
