@@ -26,3 +26,15 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine("|");
     }
 }
+int[,] CreateMatrixSumIndex(int rows, int colums);
+{
+    int[,] arr = new int[rows, colums];
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < colums; j++)
+        {
+            arr[i, j] = i + j;
+        }
+    }
+    return arr;
+}
