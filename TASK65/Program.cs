@@ -25,3 +25,25 @@ void NaturalNumbersFromMToN(int numM, int numN)
     }
     if (numN == numM) Console.Write($"{numM} ");
 }
+
+// Способ №2
+Console.WriteLine("Введите первое число");
+int numberM = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите второе число");
+int numberN = Convert.ToInt32(Console.ReadLine());
+NaturalNumbersFromMToN(numberM, numberN);
+
+void NaturalNumbersFromMToN(int numM, int numN)
+{
+    if (numM < numN)
+    {
+        Console.Write($"{numM} "); // 1 2 3 4
+        NaturalNumbersFromMToN(numM + 1, numN); // 2, 5 | 3, 5| 4,5 | 5, 5
+    }
+    if (numM > numN)
+    {
+        Console.Write($"{numM} ");
+        NaturalNumbersFromMToN(numM - 1, numN);
+    }
+    if (numN == numM) Console.Write($"{numM} "); // 5
+}
